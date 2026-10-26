@@ -1,4 +1,4 @@
-package main
+package handler
 
 import (
 	"net/http"
@@ -32,6 +32,3 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	}
 	getEngine().ServeHTTP(w, r)
 }
-
-// main tidak dieksekusi pada serverless; hadir agar go build ./... lolos
-func main() {}
